@@ -1,0 +1,9 @@
+server:
+  port: 8091
+spring:
+  security:
+    user:
+      name: user
+      password: password
+mybatis:
+  mapper-locations: classpath:*/*.xml

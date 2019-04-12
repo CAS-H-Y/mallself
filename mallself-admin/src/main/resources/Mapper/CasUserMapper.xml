@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.heyang.mall.mapper.CasUserMapper">
+    <resultMap id="BaseResultMap" type="com.heyang.mall.entity.UserDo" >
+        <id column="ID" property="id" jdbcType="VARCHAR" />
+        <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+        <result column="PASSWORD" property="password" jdbcType="DECIMAL" />
+    </resultMap>
+    <sql id="select">
+        id,username,password
+    </sql>
+    <select id="selectByUserName" resultMap="BaseResultMap">
+        select <include refid="select"></include>
+        from ums_admin ar
+        where ar.username = #{username}
+    </select>
+</mapper>
