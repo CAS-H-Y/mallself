@@ -1,0 +1,10 @@
+eureka:
+  client:
+    register-with-eureka: false #表示不注册，做集群是设置成true
+    fetch-registry: false #表示不拉取，做集群是设置成true
+    service-url: http:localhost:1001/eureka
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+server:
+  port: 1001
