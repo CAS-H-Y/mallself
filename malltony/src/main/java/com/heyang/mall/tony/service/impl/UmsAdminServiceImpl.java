@@ -4,7 +4,6 @@ import com.heyang.mall.tony.dao.UmsAdminRoleRelationDao;
 import com.heyang.mall.tony.mbg.mapper.UmsAdminMapper;
 import com.heyang.mall.tony.mbg.model.UmsAdmin;
 import com.heyang.mall.tony.mbg.model.UmsAdminExample;
-import com.heyang.mall.tony.mbg.model.UmsAdminLoginLogExample;
 import com.heyang.mall.tony.mbg.model.UmsPermission;
 import com.heyang.mall.tony.service.UmsAdminService;
 import com.heyang.mall.tony.util.JwtTokenUtil;

@@ -1,7 +1,5 @@
 package com.heyang.mall.tony.controller;
 
-import com.github.pagehelper.Page;
-import com.github.pagehelper.PageInfo;
 import com.heyang.mall.tony.common.api.CommonResult;
 import com.heyang.mall.tony.mbg.model.PmsBrand;
 import com.heyang.mall.tony.service.PmsBrandService;

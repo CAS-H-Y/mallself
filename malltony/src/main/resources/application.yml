@@ -25,6 +25,12 @@ spring:
         stat-view-servlet: #访问监控网页的登录用户名和密码
           login-username: druid
           login-password: druid
+  data:
+      elasticsearch:
+        repositories:
+          enabled: true
+        cluster-nodes: 192.168.1.108:9300 # es的连接地址及端口号
+        cluster-name: my-application #集群的名称
 mybatis:
   mapper-locations: classpath:*/*.xml
 redis:
