@@ -6,6 +6,7 @@ import com.heyang.mall.tony.service.PmsBrandService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -21,6 +22,7 @@ public class PmsBrandController {
 
     @ApiOperation("添加品牌")
     @PostMapping("/create")
+    @PreAuthorize("hasAuthority('pms:brand:create')")
     public CommonResult create(@RequestBody PmsBrand pmsBrandDto){
    return new CommonResult().success(pmsBrandService.createBrand(pmsBrandDto));
     }
@@ -42,12 +44,14 @@ public class PmsBrandController {
     }
     @ApiOperation("获取某一个品牌")
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult list(@PathVariable("id")Long id){
         return new CommonResult().success();
     }
 
     @ApiOperation("获取所有品牌列表")
     @GetMapping("/listall")
+    @PreAuthorize("hasAuthority('pms:brand:read')")
     public CommonResult lisTAll(){
         return new CommonResult().success(pmsBrandService.listAllBrand());
     }
